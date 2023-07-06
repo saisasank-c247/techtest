@@ -15,10 +15,10 @@ app.use(cors());
 app.use(express.json());
 app.use("/api/users", usersRouter);
 
-const memoizedResult = memoize(toRoman);
-console.log(memoizedResult(55))
-console.log(memoizedResult(55))
-console.log(memoizedResult(25))
+const memoizedRomanConverter = memoize(toRoman);
+console.log(memoizedRomanConverter(55))
+console.log(memoizedRomanConverter(55))
+console.log(memoizedRomanConverter(25))
 
 app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}`);
