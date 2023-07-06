@@ -35,7 +35,7 @@ export const romanToArab: Romans = {
 export function  memoize<T extends (...args: any[]) => any>(func: T): T {
   const cache: Record<string, any> = {};
 
-  const memoizedFunc = (...args: any[]): any => {
+  const memoizedFunction = (...args: any[]): any => {
     const key = JSON.stringify(args);
     if (key in cache) {
       console.log('Fetching from cache');
@@ -47,6 +47,6 @@ export function  memoize<T extends (...args: any[]) => any>(func: T): T {
     return result;
   };
 
-  return memoizedFunc as T;
+  return memoizedFunction as T;
 }
 
