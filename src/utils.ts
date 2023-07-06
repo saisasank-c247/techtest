@@ -32,23 +32,6 @@ export const romanToArab: Romans = {
   I: 1,
 } as const;
 
-// export function memoize<R, T extends (...args: any[]) => R>(f: T): T {
-//   let roman = toRoman(45);
-//   console.log(roman,"resssssss")
-//   const memory = new Map<string, R>();
-
-//   const memoizedFunc = (...args: any[]) => {
-//     if (!memory.get(args.join())) {
-//       memory.set(args.join(), f(...args));
-//     }
-
-//     return memory.get(args.join());
-//   };
-
-//   return memoizedFunc as T;
-// }
-
-
 export function  memoize<T extends (...args: any[]) => any>(func: T): T {
   const cache: Record<string, any> = {};
 
@@ -66,7 +49,4 @@ export function  memoize<T extends (...args: any[]) => any>(func: T): T {
 
   return memoizedFunc as T;
 }
-
-
-// const memoizedFibonacci = memoize(toRoman);
 

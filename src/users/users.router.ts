@@ -1,20 +1,9 @@
-/**
- * Required External Modules and Interfaces
- */
 
 import express, { Request, Response } from "express";
 import * as UsersService from "./users.service";
 import { BaseUser, User } from "./user.interface";
 
-/**
- * Router Definition
- */
-
 export const usersRouter = express.Router();
-
-/**
- * Controller Definitions
- */
 
 // GET users
 

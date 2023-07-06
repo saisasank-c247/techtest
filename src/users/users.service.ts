@@ -1,13 +1,6 @@
-/**
- * Data Model Interfaces
- */
 
 import { BaseUser, User } from "./user.interface";
 import { Users } from "./users.interface";
-
-/**
- * In-Memory Store
- */
 
 const users: Users = [
   {
@@ -31,10 +24,6 @@ const users: Users = [
     email: "jack@gmail.com",
   },
 ];
-
-/**
- * Service Methods
- */
 
 export const findAll = async (): Promise<User[]> => Object.values(users);
 
